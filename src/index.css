@@ -207,9 +207,13 @@ img {
   border-radius: 1rem;
   display: grid;
   padding: 1rem;
+  width: 350px;
   place-content: start;
   justify-items: center;
   position: relative;
+}
+.modal h1 {
+  font-size: 1.6rem;
 }
 .close-modal {
   position: absolute;
@@ -245,7 +249,6 @@ img {
 }
 .modal p {
   font-size: 0.7rem;
-  width: 50ch;
 }
 .modal-details__check {
   font-size: 0.8rem;
@@ -414,5 +417,8 @@ img {
   }
   .pin-detail-container {
     width: 90vw;
+  }
+  .modal {
+    width: 295px;
   }
 }
