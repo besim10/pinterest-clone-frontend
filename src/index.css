@@ -288,6 +288,7 @@ img {
 }
 .modal.create a {
   text-decoration: none;
+  color: inherit;
 }
 .modal-create__button {
   display: grid;
