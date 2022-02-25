@@ -299,6 +299,7 @@ img {
   gap: 1rem;
   cursor: pointer;
   border-radius: 8px;
+  color: black;
   padding: 0.2rem 1rem;
 }
 .modal-create__button:hover {
@@ -307,7 +308,7 @@ img {
 .modal-create__button span {
   font-size: 1.1rem;
   font-weight: bold;
-  color: inherit;
+  color: black;
 }
 .profile-main {
   display: grid;
