@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Header from "./components/header";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Pins from "./Pages/Pins";
 import "./index.css";
@@ -9,6 +8,8 @@ import create from "./icons/Create.svg";
 import Profile from "./pages/Profile";
 import PinBuilder from "./pages/PinBuilder";
 import { API_URL } from "../config";
+import Header from "./components/header";
+
 function App() {
   const [pins, setPins] = useState([]);
   const [modal, setModal] = useState("");
