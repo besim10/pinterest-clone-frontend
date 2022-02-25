@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Pins from "./Pages/Pins";
+import Pins from "./pages/Pins";
 import "./index.css";
 import PinDetail from "./pages/PinDetail";
 import Modals from "./components/modals/Modals";
