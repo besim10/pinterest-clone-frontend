@@ -8,7 +8,7 @@ import create from "./icons/Create.svg";
 import Profile from "./pages/Profile";
 import PinBuilder from "./pages/PinBuilder";
 import { API_URL } from "../config";
-import Header from "./components/header";
+import Header from "./components/Header";
 
 function App() {
   const [pins, setPins] = useState([]);
