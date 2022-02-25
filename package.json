@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "react-scripts build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
