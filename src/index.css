@@ -284,11 +284,11 @@ img {
 .modal.create {
   right: 120px;
   bottom: 50px;
-  color: inherit;
+  color: black;
 }
 .modal.create a {
   text-decoration: none;
-  color: inherit;
+  color: black;
 }
 .modal-create__button {
   display: grid;
@@ -307,6 +307,7 @@ img {
 .modal-create__button span {
   font-size: 1.1rem;
   font-weight: bold;
+  color: inherit;
 }
 .profile-main {
   display: grid;
