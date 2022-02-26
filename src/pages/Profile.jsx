@@ -5,7 +5,6 @@ import CreatedPins from "./CreatedPins";
 import SavedPins from "./SavedPins";
 
 function Profile({ currentUser }) {
-  const [allPins, setAllPins] = useState([]);
   const [createdPins, setCreatedPins] = useState([]);
   const navigate = useNavigate();
 
@@ -13,18 +12,7 @@ function Profile({ currentUser }) {
     if (currentUser === null) navigate("/");
   }, [currentUser, navigate]);
 
-  useEffect(() => {
-    fetch(`${API_URL}/pins`)
-      .then((resp) => resp.json())
-      .then((pinsFromServer) => {
-        setAllPins(pinsFromServer);
-      });
-  }, []);
-
   if (currentUser === null) return <h1>User not signed in...</h1>;
-  const savedPins = currentUser.saved.map((sav) =>
-    allPins.find((pin) => sav.pinId === pin.id)
-  );
 
   useEffect(() => {
     fetch(`${API_URL}/pins`)
@@ -60,7 +48,10 @@ function Profile({ currentUser }) {
           path="/created"
           element={<CreatedPins createdPins={createdPins} />}
         />
-        <Route path="/saved" element={<SavedPins savedPins={savedPins} />} />
+        <Route
+          path="/saved"
+          element={<SavedPins currentUser={currentUser} />}
+        />
       </Routes>
     </div>
   );

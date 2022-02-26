@@ -70,9 +70,7 @@ function PinDetail({ pins, setPins, currentUser, setCurrentUser, setModal }) {
           { pinId: pin.id },
         ];
         setCurrentUser(copyOfCurrentUser);
-        setTimeout(() => {
-          navigate("/profile");
-        }, 500);
+        navigate("/profile/saved");
       });
   };
   if (pin === null) return <h1>Loading...</h1>;

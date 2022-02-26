@@ -16,7 +16,7 @@ function PinBuilder({ pins, setPins, currentUser }) {
         let copyOfPins = JSON.parse(JSON.stringify(pins));
         setPins([pinFromServer, ...copyOfPins]);
         setTimeout(function () {
-          navigate("/pins");
+          navigate("/profile/created");
         }, 100);
       });
   }
