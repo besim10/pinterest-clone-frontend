@@ -15,17 +15,24 @@ function SavedPins({ currentUser }) {
   );
 
   if (allPins.length === 0) return <h1>Loading...</h1>;
+
   return (
-    <ul className="saved-list">
-      {savedPins.map((pin) => (
-        <Link to={`/pins/${pin.id}`} key={pin.id}>
-          <li className="saved-list__item">
-            <img src={pin.imgSrc} alt="" />
-            <div className="overlay"></div>
-          </li>
-        </Link>
-      ))}
-    </ul>
+    <>
+      {savedPins.length === 0 ? (
+        <h3 className="message-not-created">Not any saved pined yet...</h3>
+      ) : (
+        <ul className="saved-list">
+          {savedPins.map((pin) => (
+            <Link to={`/pins/${pin.id}`} key={pin.id}>
+              <li className="saved-list__item">
+                <img src={pin.imgSrc} alt="" />
+                <div className="overlay"></div>
+              </li>
+            </Link>
+          ))}
+        </ul>
+      )}
+    </>
   );
 }
 export default SavedPins;
